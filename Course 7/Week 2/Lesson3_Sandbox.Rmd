@@ -18,13 +18,23 @@ In this activity, you will be using a package called `tidyverse.` The `tidyverse
 To install the `tidyverse` package, execute the code in the code chunk below by clicking on the green arrow button in the top right corner. When you execute a code chunk in RMarkdown, the output will appear in the .rmd area and your console.
 
 ```{r}
-install.packages("tidyverse")
+#install.packages("tidyverse")
+
+
+
+
 ```
 
 Once a package is installed, you can load it by running the `library()` function with the package name inside the parentheses, like this:
 
 ```{r}
 library(tidyverse)
+
+#Added ggplot2 for visualization purposes
+library(ggplot2)
+
+#Added dplyr
+library(dplyr)
 ```
 
 Installing and loading the `tidyverse` package may take a few minutes-- be sure to wait for it to finish running before moving on to the next steps!
