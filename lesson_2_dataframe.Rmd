@@ -1,0 +1,43 @@
+---
+title: 'Lesson 2: Create your own data frame'
+author: "Janrey Ubane"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Step 1: Load packages (Skipped)
+```{r}
+packageVersion("tidyverse")
+library(tidyverse)
+library(dplyr)
+```
+
+## Step 2: Create data frame
+```{r}
+#raw data
+names <- c("John", "Shemken", "Pig pig", "Nik nik")
+age <- c(3,4,5,6)
+
+#dataframe
+people <- data.frame(names,age)
+```
+
+## Step 3: inspect the data frame
+```{r}
+head(people)
+str(people)
+glimpse(people)
+colnames(people)
+mutate(people, age_in_20 = age + 20)
+```
+
+## Step 4: Try it yourself
+```{r}
+fruits <- c("banana", "apple", "avocado", "orange", "mango")
+fruit_rank <- c("3", "4", "2", "5", "1")
+fruit_ranks <- data.frame(fruits, fruit_rank);
+head(fruit_ranks)
+glimpse(fruit_ranks)
+mutate(fruit_ranks, percentage = mean(fruit_rank))
+```
+
