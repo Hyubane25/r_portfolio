@@ -1,4 +1,5 @@
 ---
+author: Janrey Ubane
 title: 'C7M4L2A1: You and GGPlot'
 output: html_document
 ---
@@ -74,15 +75,18 @@ Next, your stakeholder says that she wants to increase weekend bookings, an impo
 Try mapping 'stays_in_weekend_nights' on the x-axis and 'children' on the y-axis by filling out the remainder of the code below.
 
 ```{r}
+#Edited
 ggplot(data = hotel_bookings) +
- geom_point(mapping = aes(x = , y = ))
+ geom_col(mapping = aes(x = stays_in_weekend_nights, y = children))
 ```
 
 If you correctly enter this code, you should have a scatterplot with 'stays_in_weekend_nights' on the x-axis and 'children' on the y-axis. 
 
 What did you discover? Is your stakeholder correct?
+#0 children guests have the most weekend nights, which supports the statement of the stakeholder into a TRUE statement.
 
 What other types of plots could you use to show this relationship?
+#geom_col for more redability.
 
 Remember, if you're having trouble filling out a code block, check the solutions document for this activity. 
 

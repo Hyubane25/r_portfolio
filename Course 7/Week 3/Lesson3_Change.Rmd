@@ -36,7 +36,8 @@ In the chunk below, you will use the `read_csv()` function to import data from a
 If this line causes an error, copy in the line setwd("/cloud/project/Course 7/Week 3") before it. 
 
 ```{r load dataset}
-hotel_bookings <- read_csv("")
+#Edited by Janrey
+hotel_bookings <- read_csv("hotel_bookings.csv")
 ```
 
 ## Step 3: Getting to know your data
@@ -44,7 +45,8 @@ hotel_bookings <- read_csv("")
 Like you have been doing in other examples, you are going to use summary functions to get to know your data. This time, you are going to complete the code chunks below in order to use these different functions. You can use the `head()` function to preview the columns and the first several rows of data. Finish the code chunk below and run it:
 
 ```{r head function}
-head()
+# Edited by Janrey
+head(hotel_bookings)
 ```
 
 Now you know this dataset contains information on hotel bookings. Each booking is a row in the dataset, and each column contains information such as what type of hotel was booked, when the booking took place, and how far in advance the booking took place (the 'lead_time' column).
@@ -52,13 +54,16 @@ Now you know this dataset contains information on hotel bookings. Each booking i
 In addition to `head()` you can also use the `str()` and `glimpse()` functions to get summaries of each column in your data arranged horizontally. You can try these two functions by completing and running the code chunks below:
 
 ```{r str function}
-(hotel_bookings)
+# Edited by Janrey | fixed instead of (hotel_bookings), I changed it into str(hotel_bookings)
+# (hotel_bookings)
+str(hotel_bookings)
 ```
 
 You can see the different column names and some sample values to the right of the colon. 
 
 ```{r glimpse function}
-glimpse()
+# Edited by Janrey
+glimpse(hotel_bookings)
 ```
 
 You can also use `colnames()` to get the names of the columns in your dataset. Run the code chunk below to get the column names:
@@ -72,7 +77,8 @@ colnames(hotel_bookings)
 Let's say you want to arrange the data by most lead time to least lead time because you want to focus on bookings that were made far in advance. You decide you want to try using the `arrange()` function; input the correct column name after the comma and run this code chunk: 
 
 ```{r arrange function}
-arrange(hotel_bookings, )
+# Edited by Janrey
+arrange(hotel_bookings, -lead_time)
 ```
 
 
@@ -116,7 +122,7 @@ min(hotel_bookings$lead_time)
 Remember, in this case, you need to specify which dataset and which column using the $ symbol between their names. Try running the below to see what happens if you forget one of those pieces:
 
 ```{r}
-min(lead_time)
+min(hotel_bookings_v2$lead_time)
 ```
 
 This is a common error that R users encounter. To correct this code chunk, you will need to add the data frame and the dollar sign in the appropriate places. 
@@ -147,7 +153,8 @@ You were able to report to your boss what the average lead time before booking i
 You know that your first step will be creating a new dataset that only contains data about city hotels. You can do that using the `filter()` function, and name your new data frame 'hotel_bookings_city':
 
 ```{r filter}
- <- 
+# Edited by Janrey
+hotel_bookings_city <- 
   filter(hotel_bookings, hotel_bookings$hotel=="City Hotel")
 ```
 
